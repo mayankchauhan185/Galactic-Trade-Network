@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "dbb4a0a5-c93a-46bc-98a2-dee54c141cdc",
 		"name": "Mayank's Collection",
+		"description": "**Postman Collection Description:**\n\nThis collection represents the backend system for an intergalactic trade network, designed to manage trade transactions, space cargo shipments, and space station inventory levels across planets and space stations. The system handles high-throughput data and provides real-time updates on trade activities, ensuring efficient cargo tracking and inventory management. Each API is optimized for scalability and performance, supporting a high volume of transactions. An API Gateway routes requests to appropriate services, handling authentication and ensuring secure access.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32674751"
 	},
@@ -39,7 +40,8 @@
 								"location",
 								"create"
 							]
-						}
+						},
+						"description": "Creation of Space ships or planets can be done through here."
 					},
 					"response": []
 				},
@@ -73,7 +75,8 @@
 								"location",
 								"update"
 							]
-						}
+						},
+						"description": "Updation of Space ships or planets can be done through here."
 					},
 					"response": []
 				},
@@ -99,7 +102,8 @@
 								"get",
 								"all"
 							]
-						}
+						},
+						"description": "Get all the locations"
 					},
 					"response": []
 				},
@@ -125,11 +129,13 @@
 								"fetch",
 								""
 							]
-						}
+						},
+						"description": "Get location with location id"
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "To Manage Location Entity"
 		},
 		{
 			"name": "SKU",
@@ -164,7 +170,8 @@
 								"sku",
 								"create"
 							]
-						}
+						},
+						"description": "Creation of sku or goods can be done through here."
 					},
 					"response": []
 				},
@@ -198,7 +205,8 @@
 								"sku",
 								"update"
 							]
-						}
+						},
+						"description": "Updation of sku or gooods can be done through here."
 					},
 					"response": []
 				},
@@ -232,7 +240,8 @@
 								"sku",
 								"search"
 							]
-						}
+						},
+						"description": "Searching based on category type or name can be done through this api."
 					},
 					"response": []
 				},
@@ -258,7 +267,8 @@
 								"get",
 								"all"
 							]
-						}
+						},
+						"description": "Get all the products"
 					},
 					"response": []
 				},
@@ -284,11 +294,13 @@
 								"fetch",
 								""
 							]
-						}
+						},
+						"description": "Get product with id"
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "To Manage SKU/ Good"
 		},
 		{
 			"name": "Register",
@@ -297,7 +309,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"Abhinav\",\r\n    \"password\":\"abhi123@2002\",\r\n    \"email\":\"abhinavs@gmail.com\"\r\n}",
+					"raw": "{\r\n    \"name\":\"name\",\r\n    \"password\":\"password\",\r\n    \"email\":\"email\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -314,7 +326,8 @@
 						"auth",
 						"register"
 					]
-				}
+				},
+				"description": "Register a user with email and password"
 			},
 			"response": []
 		},
@@ -325,7 +338,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"password\":\"abhi123@2002\",\r\n    \"email\":\"abhinavs@gmail.com\"\r\n}",
+					"raw": "{\r\n    \"password\":\"password\",\r\n    \"email\":\"email\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -342,7 +355,8 @@
 						"auth",
 						"login"
 					]
-				}
+				},
+				"description": "Login to system with email and password"
 			},
 			"response": []
 		},
@@ -410,7 +424,8 @@
 						"trades",
 						"create"
 					]
-				}
+				},
+				"description": "Initiation of trade"
 			},
 			"response": []
 		},
@@ -442,7 +457,8 @@
 							"value": ""
 						}
 					]
-				}
+				},
+				"description": "Get current inventory status of space stations."
 			},
 			"response": []
 		},
@@ -474,7 +490,8 @@
 							"value": ""
 						}
 					]
-				}
+				},
+				"description": "Get current cargo shipment status."
 			},
 			"response": []
 		},
@@ -506,7 +523,8 @@
 							"value": ""
 						}
 					]
-				}
+				},
+				"description": "Get trade transaction details."
 			},
 			"response": []
 		},
@@ -531,7 +549,8 @@
 						"updates",
 						"real-time"
 					]
-				}
+				},
+				"description": "Get real time updates on trade and cargo."
 			},
 			"response": []
 		}
