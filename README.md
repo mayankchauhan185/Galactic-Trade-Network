@@ -3,6 +3,8 @@
 DEPLOYMENT INSTRUCTIONS
 
 -first open the .env file and change NODE_ENV=development to NODE_ENV=production.
+
+
 -Launch EC2 Instance
 Create Instance:
 
