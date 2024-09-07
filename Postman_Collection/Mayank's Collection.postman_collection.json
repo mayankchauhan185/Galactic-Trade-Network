@@ -1,0 +1,578 @@
+{
+	"info": {
+		"_postman_id": "dbb4a0a5-c93a-46bc-98a2-dee54c141cdc",
+		"name": "Mayank's Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32674751"
+	},
+	"item": [
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"value\": {\r\n        \"name\": \"name\",\r\n        \"type\": \"planet\",\r\n        \"coordinates\": \"X100,Y200,Z300\",\r\n        \"capacity\": 20,\r\n        \"inventory\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{REQUEST_URL}}/api/location/create",
+							"host": [
+								"{{REQUEST_URL}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"66dc422f5c7accbb546f3a42\",\r\n    \"value\": {\r\n        \"name\": \"name\",\r\n        \"type\": \"planet\",\r\n        \"coordinates\": \"X100,Y200,Z300\",\r\n        \"capacity\": 20,\r\n        \"inventory\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{REQUEST_URL}}/api/location/update",
+							"host": [
+								"{{REQUEST_URL}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{REQUEST_URL}}/api/location/get/all",
+							"host": [
+								"{{REQUEST_URL}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"get",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get With Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{REQUEST_URL}}/api/location/fetch/",
+							"host": [
+								"{{REQUEST_URL}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"fetch",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SKU",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"value\": {\r\n        \"name\": \"name\",\r\n        \"description\": \"description\",\r\n        \"category\": \"food\",\r\n        \"availableAt\": [\r\n            {\r\n                \"locationId\": \"66dc422f5c7accbb546f3a42\"\r\n            }\r\n        ],\r\n        \"inStock\": 50\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{REQUEST_URL}}/api/sku/create",
+							"host": [
+								"{{REQUEST_URL}}"
+							],
+							"path": [
+								"api",
+								"sku",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"66dc422f5c7accbb546f3a42\",\r\n    \"value\": {\r\n        \"name\": \"name\",\r\n        \"type\": \"planet\",\r\n        \"coordinates\": \"X100,Y200,Z300\",\r\n        \"capacity\": 20,\r\n        \"inventory\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{REQUEST_URL}}/api/sku/update",
+							"host": [
+								"{{REQUEST_URL}}"
+							],
+							"path": [
+								"api",
+								"sku",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pageNumber\": 1,\r\n    \"pageSize\": 10,\r\n    \"filter\": {\r\n        \"category\": \"food\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{REQUEST_URL}}/api/sku/search",
+							"host": [
+								"{{REQUEST_URL}}"
+							],
+							"path": [
+								"api",
+								"sku",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{REQUEST_URL}}/api/sku/get/all",
+							"host": [
+								"{{REQUEST_URL}}"
+							],
+							"path": [
+								"api",
+								"sku",
+								"get",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get With Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{REQUEST_URL}}/api/sku/fetch/",
+							"host": [
+								"{{REQUEST_URL}}"
+							],
+							"path": [
+								"api",
+								"sku",
+								"fetch",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Abhinav\",\r\n    \"password\":\"abhi123@2002\",\r\n    \"email\":\"abhinavs@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{REQUEST_URL}}/api/auth/register",
+					"host": [
+						"{{REQUEST_URL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"abhi123@2002\",\r\n    \"email\":\"abhinavs@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{REQUEST_URL}}/api/auth/login",
+					"host": [
+						"{{REQUEST_URL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Cargo Shipment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cargo\": [\r\n        {\r\n            \"goodId\": \"good_id\",\r\n            \"quantity\": 50\r\n        }\r\n    ],\r\n    \"origin\": \"origin_location_id\",\r\n    \"destination\": \"destination_location_id\",\r\n    \"departureDate\": \"2024-09-01T12:00:00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{REQUEST_URL}}/api/cargo/create",
+					"host": [
+						"{{REQUEST_URL}}"
+					],
+					"path": [
+						"api",
+						"cargo",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Initiate a new trade transaction.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"goodId\": \"good_id\",\r\n    \"quantity\": 100,\r\n    \"stationId\": \"station_id\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{REQUEST_URL}}/api/trades/create",
+					"host": [
+						"{{REQUEST_URL}}"
+					],
+					"path": [
+						"api",
+						"trades",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve inventory levels for a space station.",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{REQUEST_URL}}/api/inventory/get/:stationId",
+					"host": [
+						"{{REQUEST_URL}}"
+					],
+					"path": [
+						"api",
+						"inventory",
+						"get",
+						":stationId"
+					],
+					"variable": [
+						{
+							"key": "stationId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve cargo shipment details.",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{REQUEST_URL}}/api/cargo/get/:shipmentId",
+					"host": [
+						"{{REQUEST_URL}}"
+					],
+					"path": [
+						"api",
+						"cargo",
+						"get",
+						":shipmentId"
+					],
+					"variable": [
+						{
+							"key": "shipmentId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve details of a trade transaction.",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{REQUEST_URL}}/api/trades/get/:transactionId",
+					"host": [
+						"{{REQUEST_URL}}"
+					],
+					"path": [
+						"api",
+						"trades",
+						"get",
+						":transactionId"
+					],
+					"variable": [
+						{
+							"key": "transactionId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve real-time updates on trade and cargo status.",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{REQUEST_URL}}/api/updates/real-time",
+					"host": [
+						"{{REQUEST_URL}}"
+					],
+					"path": [
+						"api",
+						"updates",
+						"real-time"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "REQUEST_URL",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGM0MDI1Y2I0YTc1ZDUwYTc3NGIyYyIsImlhdCI6MTcyNTcxMDQ0NywiZXhwIjoxNzI1NzE0MDQ3fQ._8rhtPKmAVjVE31nAc5j75lZaCrcRNtjpfHFmd_YGfA",
+			"type": "string"
+		},
+		{
+			"key": "REFRESH_TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZGM0MDI1Y2I0YTc1ZDUwYTc3NGIyYyIsImlhdCI6MTcyNTcxMDQ0NywiZXhwIjoxNzI1Nzk2ODQ3fQ.QqsqWlKfpN62i2lBzdkA35BN0S-wCFW3ogZjF_Njfno",
+			"type": "string"
+		}
+	]
+}
