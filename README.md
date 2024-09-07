@@ -108,11 +108,15 @@ quantity: Number indicating the quantity of goods involved in the activity.
 locationId: Reference to the Location model, specifying the location related to the activity.
 timestamp: Date when the activity was recorded. Defaults to the current date and time.
 details: Additional information about the activity, such as "shipment in space".
+
+
 Design and Architectural Choices
 Schema References: Using ObjectId references (userId, goodId, locationId) enables the model to relate to other collections and maintain data integrity.
 Required Field: The action field is mandatory to ensure that every log entry specifies what type of activity occurred.
 Default Timestamps: The timestamp field automatically captures the time of the activity, simplifying logging and historical tracking.
 Flexible Details: The details field allows for additional context, providing more information about the specific activity if needed.
+
+
 
 Inventory-
 
@@ -124,10 +128,14 @@ goods: Array of objects where each object contains:
 goodId: Reference to the SKU model, identifying the specific good.
 quantity: Number representing the quantity of the good available at the location. This field is required.
 lastUpdated: Date when the inventory was last updated. Defaults to the current date and time.
+
+
 Design and Architectural Choices
 Schema References: Using ObjectId references (locationId, goodId) establishes relationships between the Inventory, Location, and SKU models, ensuring data integrity and easy data retrieval.
 Required Fields: locationId and quantity are mandatory, ensuring that every inventory entry is linked to a location and specifies a quantity for each good.
 Default Timestamps: The lastUpdated field automatically records the time of the last update, aiding in tracking changes and maintaining data accuracy.
+
+
 
 
 Location-
@@ -143,11 +151,15 @@ inventory: Array of objects where each object contains:
 goodId: Reference to the SKU model, identifying the specific good.
 quantity: Number representing the quantity of the good available at this location.
 lastUpdated: Date when the inventory was last updated. Defaults to the current date and time.
+
+
 Design and Architectural Choices
 Schema References: Uses ObjectId references (goodId) to link the inventory items to the SKU model, enabling relational data management.
 Enum for Type: Restricts the type field to predefined values (space_station, planet) to ensure valid location types.
 Default Capacity: Sets a default capacity to handle initial inventory limits.
 Timestamps: The lastUpdated field provides automatic tracking of inventory updates.
+
+
 
 
 Shipment-
@@ -176,11 +188,15 @@ realTimeUpdates: Array of objects providing real-time status updates for the shi
 status: String describing the current status of the shipment (e.g., in_space, near_station, arrived). This field is required.
 location: String indicating the coordinate location or nearby station/planet.
 timestamp: Date and time when the update was recorded. Defaults to the current date and time.
+
+
 Design and Architectural Choices
 Schema References: Uses ObjectId references (goodId, origin, destination, cargoOperatorId) to establish relationships with the SKU, Location, and User models.
 Status Enum: Limits the status and realTimeUpdates.status fields to predefined values, ensuring valid shipment states.
 Required Fields: origin, destination, and departureDate are mandatory to ensure complete shipment information.
 Real-Time Tracking: Includes a realTimeUpdates array to capture ongoing status changes and location updates, facilitating dynamic tracking.
+
+
 
 
 SKU-
@@ -200,6 +216,8 @@ Category Enum: Restricts the category field to predefined values to maintain con
 Default Stock: Initializes inStock with a default value of 0 to handle cases where no units are initially available.
 
 
+
+
 User-
 
 The User schema defines user attributes, including their credentials, role, trade history, and token information.
@@ -216,6 +234,7 @@ goodId: Reference to the SKU model identifying the traded goods.
 quantity: Number representing the quantity of goods traded.
 tradeDate: Date when the trade occurred. Defaults to the current date and time.
 refreshToken: Optional string for storing refresh tokens used for authentication.
+
 Design and Architectural Choices
 Email Indexing: The email field is indexed and unique to ensure efficient querying and prevent duplicate entries.
 Role Enum: Uses an enum for the role field to restrict user roles to predefined values, ensuring role consistency.
