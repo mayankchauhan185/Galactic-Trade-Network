@@ -246,4 +246,4 @@ Optional Fields: Allows flexibility with optional fields like name, password, an
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-API testing instructions are added in the postman_collection file.
+API testing instructions are added in the Postman_Collection file.
