@@ -242,3 +242,8 @@ Email Indexing: The email field is indexed and unique to ensure efficient queryi
 Role Enum: Uses an enum for the role field to restrict user roles to predefined values, ensuring role consistency.
 Timestamps: The createdOn and modifiedOn fields automatically manage record creation and updates.
 Optional Fields: Allows flexibility with optional fields like name, password, and refreshToken.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+API testing instructions are added in the postman_collection file.
