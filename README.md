@@ -247,3 +247,27 @@ Optional Fields: Allows flexibility with optional fields like name, password, an
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 API testing instructions are added in the Postman_Collection file.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Future Scope
+
+ Advanced AI-Powered Trade Optimization-
+ 
+Incorporate machine learning algorithms to predict demand and optimize trade routes across galaxies.
+Use AI for better cargo space allocation and route optimization based on historical data.
+
+
+Enhanced Security Features-
+
+Introduce more advanced, decentralized authentication mechanisms such as blockchain for trade verification.
+Implement role-based access control and multi-layered security measures to protect high-value intergalactic transactions.
+
+
+Blockchain Integration for Secure Transactions-
+
+Implement blockchain for secure, transparent, and immutable record-keeping of transactions across the network, allowing trusted and decentralized auditing.
+Use smart contracts to handle complex multi-party trade deals automatically.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
